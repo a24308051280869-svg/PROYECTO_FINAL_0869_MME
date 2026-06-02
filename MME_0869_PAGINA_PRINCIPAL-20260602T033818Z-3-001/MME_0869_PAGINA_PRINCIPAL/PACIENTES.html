@@ -1,0 +1,319 @@
+INICIO
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Clínica Dental La Casa del Ratón Pérez</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #004a7c;
+      padding: 40px;
+      text-align: center;
+      color: white;
+    }
+
+    header img {
+      margin-top: 10px;
+      border-radius: 50%;
+    }
+
+   nav {
+      width: 100%;
+      background: #008196; 
+      padding: 0; 
+    }
+    
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+    
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 1px;
+      padding: 15px 20px; 
+      display: block;
+      transition: background 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #004a7c; 
+    }
+
+   article {
+      padding: 40px;
+      width: 90%;          
+      max-width: 800px; 
+      margin: 40px auto;    
+      background-color: white; 
+      min-height: 300px;
+      border-radius: 12px;  
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08); 
+    }
+
+    article h2 {
+      color: #004a7c;
+      font-size: 1.8rem;
+      margin-top: 0;
+    }
+
+    article h3 {
+      color: #008196;
+      font-size: 1.4rem;
+      margin-top: 30px;
+    }
+
+    article ul {
+      padding-left: 20px;
+    }
+    
+    article ul li {
+      margin-bottom: 8px;
+    }
+
+
+    footer {
+      background-color: #222;
+      padding: 25px;
+      text-align: center;
+      color: white;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+      article {
+        width: 95%; 
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Dental - Dentistas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #004a7c;
+      padding: 30px;
+      text-align: center;
+      color: white;
+    }
+
+    nav {
+      width: 100%;
+      background: #00bcd4;
+      padding: 15px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+    }
+    nav ul li a { 
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    article h2, article h3 {
+      color: #6a5acd;
+      text-align: center;
+    }
+
+    table {
+      width: 90%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background-color: white;
+    }
+
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+
+    table th {
+      background-color: #9f55a8;
+      color: white;
+    }
+
+    table tr:nth-child(even) {
+      background-color: #9f7ea8;
+    }
+
+    footer {
+      background-color: #777;
+      padding: 20px;
+      text-align: center;
+      color: white; 
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>CONSULTORIO MÉDICO</h2>
+  <img src="axolote.jpg" alt="logo de un axolote" width="100">
+</header>
+
+<nav>
+  <ul>
+    <li><a href="PAGINA_PRINCIPAL_MME_0869.html">INICIO</a></li> 
+    <li><a href="PACIENTES.html">PACIENTES</a></li> 
+    <li><a href="MEDICOS.html">MEDICOS</a></li> 
+    <li><a href="MEDICAMENTOS.html">MEDICAMENTOS</a></li> 
+    <li><a href="FACTURACION.html">FACTURACION</a></li> 
+  </ul>
+</nav>
+
+<section>
+  <article>
+    <h2>PACIENTES</h2>
+  </article>
+</section>
+
+<main>
+  <table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>NOMBRE</th>
+      <th>DNI</th>
+      <th>TIPO DE SANGRE</th>
+      <th>ALERGIAS</th>
+      <th>CONTACTO DE EMERGENCIA</th>
+      <th>TELEFONO</th>
+      <th>SEGURO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>P101</td>
+      <td>JUAN PEREZ</td>
+      <td>12345678-K</td>
+      <td>O+</td>
+      <td>AINES</td>
+      <td>ESPOSA-555-0192</td>
+      <td>656-114-646</td>
+      <td>METLIFE</td>
+    </tr>
+    <tr>
+      <td>P102</td>
+      <td>MARIA SOSA</td>
+      <td>98765432-1</td>
+      <td>A+</td>
+      <td>LATEX</td>
+      <td>MADRE-555-0283-444</td>
+      <td>656-0283-444</td>
+      <td>BLUECROSS</td>
+    </tr>
+    <tr>
+      <td>P103</td>
+      <td>PADRO PARAMO</td>
+      <td>44556677-2</td>
+      <td>B+</td>
+      <td>NINGUNA</td>
+      <td>HERMANO-555-0374</td>
+      <td>656-124-466</td>
+      <td>PARTICULAR</td>
+    </tr>
+    <tr>
+      <td>P104</td>
+      <td>ANA FRANK</td>
+      <td>44223344-5</td>
+      <td>AB+</td>
+      <td>PENICILINA</td>
+      <td>PADRE-555-0465</td>
+      <td>656-248-644</td>
+      <td>ALLIANZ</td>
+    </tr>
+    <tr>
+      <td>P105</td>
+      <td>LUIS MIGUEL</td>
+      <td>66778899-0</td>
+      <td>O-</td>
+      <td>POLEN</td>
+      <td>MANAGER-555-0556</td>
+      <td>546-124-466</td>
+      <td>HUMANO</td>
+    </tr>
+    <tr>
+      <td>P106</td>
+      <td>CARMEN LIRA</td>
+      <td>33445566-7</td>
+      <td>O+</td>
+      <td>NINGUNA</td>
+      <td>HIJO-55-0647</td>
+      <td>656-4706-446</td>
+      <td>SANITAS</td>
+    </tr>
+    <tr>
+      <td>P107</td>
+      <td>JOSE ARCADIO</td>
+      <td>22334455-8</td>
+      <td>A+</td>
+      <td>SULFA</td>
+      <td>ESPOSA-555-0738</td>
+      <td>656-0738-999</td>
+      <td>MAPFRE</td>
+    </tr>
+    <tr>
+      <td>P108</td>
+      <td>URSULA IGUARAN</td>
+      <td>99001122-3</td>
+      <td>O+</td>
+      <td>NINGUNA</td>
+      <td>NIETO-555-0910</td>
+      <td>656-0869-888</td>
+      <td>ESTATAL</td>
+    </tr>
+  </tbody>
+</table>
+</main>
+
+<footer>
+  <p>ERIK MARTINEZ MONTES N.CONTROL 24308051280869</p>
+</footer>
+
+</body>
+</html>
+

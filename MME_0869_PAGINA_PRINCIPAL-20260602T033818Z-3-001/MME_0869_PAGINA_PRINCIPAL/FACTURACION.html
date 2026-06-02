@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Dental - Dentistas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #004a7c;
+      padding: 30px;
+      text-align: center;
+      color: white;
+    }
+
+    nav {
+      width: 100%;
+      background: #00bcd4;
+      padding: 15px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+    }
+    nav ul li a { 
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    article h2 {
+      color: #409b81;
+      text-align: center;
+    }
+
+    table {
+      width: 90%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background-color: white;
+    }
+
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+
+    table th {
+      background-color: #409b81;
+      color: white;
+    }
+
+    table tr:nth-child(even) {
+      background-color: #9fc2a8;
+    }
+
+    footer {
+      background-color: #777;
+      padding: 20px;
+      text-align: center;
+      color: white; 
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>CONSULTORIO MÉDICO</h2>
+  <img src="axolote.jpg" alt="logo de un axolote" width="100">
+</header>
+
+<nav>
+  <ul>
+    <li><a href="PAGINA_PRINCIPAL_MME_0869.html">INICIO</a></li> 
+    <li><a href="PACIENTES.html">PACIENTES</a></li> 
+    <li><a href="MEDICOS.html">MEDICOS</a></li> 
+    <li><a href="MEDICAMENTOS.html">MEDICAMENTOS</a></li> 
+    <li><a href="FACTURACION.html">FACTURACION</a></li> 
+  </ul>
+</nav>
+
+<section>
+  <article>
+    <h2>FACTURACION</h2>
+  </article>
+</section>
+
+<main>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>PACIENTES-ID</th>
+      <th>ESTADO DE PAGO</th>
+      <th>N.NOMBRE</th>
+      <th>CITA/OP</th>
+      <th>SUBTOTAL</th>
+      <th>IMPUESTOS</th>
+      <th>COPAGO PACIENTE</th>
+      <th>TOTAL FINAL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>F-1001</td>
+      <td>P-101</td>
+      <td>PENDIENTE SEGURO</td>
+      <td>JUAN PEREZ</td>
+      <td>OP-901</td>
+      <td>45,000</td>
+      <td>7200</td>
+      <td>1500</td>
+      <td>53,700</td>
+    </tr>
+    <tr>
+      <td>F-1002</td>
+      <td>P-102</td>
+      <td>PAGADO</td>
+      <td>MARIANA SOZA</td>
+      <td>OP-902</td>
+      <td>12000</td>
+      <td>1920</td>
+      <td>1500</td>
+      <td>54,420</td>
+    </tr>
+    <tr>
+      <td>F-1003</td>
+      <td>P-103</td>
+      <td>PENDIENTE</td>
+      <td>PEDRO PARAMO</td>
+      <td>OP-903</td>
+      <td>85000</td>
+      <td>13,600</td>
+      <td>5000</td>
+      <td>600</td>
+    </tr>
+    <tr>
+      <td>F-1004</td>
+      <td>P-104</td>
+      <td>PAGADO POR SEGURO</td>
+      <td>ANA FRANK</td>
+      <td>OP-904</td>
+      <td>32000</td>
+      <td>5120</td>
+      <td>0</td>
+      <td>37120</td>
+    </tr>
+    <tr>
+      <td>F-1005</td>
+      <td>P-105</td>
+      <td>PAGADO</td>
+      <td>LUIS MIGUEL</td>
+      <td>OP-905</td>
+      <td>5000</td>
+      <td>800</td>
+      <td>200</td>
+      <td>6000</td>
+    </tr>
+    <tr>
+      <td>F-1006</td>
+      <td>P-106</td>
+      <td>PAGADO EN EFECTIVO</td>
+      <td>CARMEN LIRA</td>
+      <td>OP-906</td>
+      <td>1500</td>
+      <td>240</td>
+      <td>1740</td>
+      <td>1740</td>
+    </tr>
+    <tr>
+      <td>F-1007</td>
+      <td>P-107</td>
+      <td>PENDIENTE</td>
+      <td>JOSE ARCADIO</td>
+      <td>OP-907</td>
+      <td>15500</td>
+      <td>2480</td>
+      <td>800</td>
+      <td>18780</td>
+    </tr>
+    <tr>
+      <td>F-1008</td>
+      <td>P-108</td>
+      <td>PAGADO</td>
+      <td>URSULA IGUARAN</td>
+      <td>OP-908</td>
+      <td>28000</td>
+      <td>4,480</td>
+      <td>1200</td>
+      <td>33687</td>
+    </tr>
+  </tbody>
+</table>  </main>
+
+<footer>
+  <p>ERIK MARTINEZ MONTES N.CONTROL 24308051280869</p>
+</footer>
+
+</body>
+</html>
