@@ -14,27 +14,21 @@
     .search-container { width: 90%; margin: 20px auto 0 auto; display: flex; justify-content: flex-end; gap: 10px; }
     .input-search { padding: 8px 12px; border: 1px solid #ccc; border-radius: 4px; width: 250px; font-family: Arial, sans-serif; }
     .btn-search { background-color: #004a7c; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold; }
-    .btn-search:hover { background-color: #002d50; }
     table { width: 90%; margin: 10px auto 20px auto; border-collapse: collapse; background-color: white; }
     table th, table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
     table th { background-color: #409b81; color: white; }
     table tr:nth-child(even) { background-color: #9fc2a8; }
     .btn-action-update { background-color: #00bcd4; color: white; border: none; padding: 6px 10px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 12px; margin-right: 5px; }
-    .btn-action-update:hover { background-color: #0091a4; }
     .btn-action-delete { background-color: #dc3545; color: white; border: none; padding: 6px 10px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 12px; }
-    .btn-action-delete:hover { background-color: #bd2130; }
     .form-container { max-width: 600px; width: 90%; background: white; padding: 30px; margin: 40px auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 6px solid #409b81; }
     .form-container h3 { color: #004a7c; text-align: center; margin-top: 0; font-size: 1.5rem; }
-    .form-container p { text-align: center; color: #666; font-size: 0.9rem; margin-bottom: 25px; }
     .form-group { margin-bottom: 20px; }
     label { display: block; margin-bottom: 6px; font-weight: bold; color: #333; font-size: 14px; }
-    input[type="text"], input[type="number"], input[type="month"] { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-family: Arial, sans-serif; font-size: 14px; box-sizing: border-box; }
-    input:focus { outline: none; border-color: #409b81; box-shadow: 0 0 5px rgba(64, 155, 129, 0.3); }
+    input[type="text"] { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-family: Arial, sans-serif; font-size: 14px; box-sizing: border-box; }
     .btn-submit { background-color: #409b81; color: white; border: none; padding: 12px; width: 100%; border-radius: 4px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 10px; }
-    .btn-submit:hover { background-color: #337a66; }
-    .btn-back-box { text-align: center; margin-top: 20px; }
-    .btn-back { color: #004a7c; text-decoration: none; font-size: 14px; font-weight: bold; }
-    footer { background-color: #777; padding: 20px; text-align: center; color: white; margin-top: 20px; }
+    footer { background-color: #222; padding: 30px; text-align: center; color: white; font-size: 0.9rem; margin-top: 40px; }
+    footer img { border-radius: 50%; margin-bottom: 10px; }
+    footer p { margin: 5px 0; letter-spacing: 1px; }
   </style>
 </head>
 <body>
@@ -58,7 +52,7 @@
 
 <main>
 <div class="search-container">
-  <input type="text" class="input-search" placeholder="Buscar medicamento o lote...">
+  <input type="text" class="input-search" placeholder="Buscar insumo o lote...">
   <button type="button" class="btn-search">Buscar</button>
 </div>
 
@@ -69,36 +63,41 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>INV-H1</td><td>MORFINA 10MG</td><td>LT-99</td><td>PHARMA CORP</td><td>15-25C</td><td>A-01(CAJA FUERTA)</td><td>2024-12</td>
-      <td><button type="button" class="btn-action-update">Actualizar</button> <button type="button" class="btn-action-delete">Eliminar</button></td>
-    </tr>
-    <tr>
-      <td>INV-H2</td><td>INSULINA</td><td>LT-45</td><td>BIOLABS</td><td>2-8C</td><td>REFRIGERADOR B-2</td><td>2025-05</td>
-      <td><button type="button" class="btn-action-update">Actualizar</button> <button type="button" class="btn-action-delete">Eliminar</button></td>
-    </tr>
+    <tr><td>INV-H1</td><td>MORFINA 10MG</td><td>LT-99</td><td>PHARMA CORP</td><td>15-25C</td><td>A-01(CAJA FUERTA)</td><td>2024-12</td><td><button type="button" class="btn-action-update">Actualizar</button><button type="button" class="btn-action-delete">Eliminar</button></td></tr>
+    <tr><td>INV-H2</td><td>INSULINA</td><td>LT-45</td><td>BIOLABS</td><td>2-8C</td><td>REFRIGERADOR B-2</td><td>2025-05</td><td><button type="button" class="btn-action-update">Actualizar</button><button type="button" class="btn-action-delete">Eliminar</button></td></tr>
+    <tr><td>INV-H3</td><td>OXIGENO</td><td>LT-10</td><td>AIRLIQUIDE</td><td>AMBIENTE</td><td>ALMACEN EXTRERIOR</td><td>2027-01</td><td><button type="button" class="btn-action-update">Actualizar</button><button type="button" class="btn-action-delete">Eliminar</button></td></tr>
+    <tr><td>INV-H4</td><td>AMOXICILINA</td><td>LT-22</td><td>MEDSUPLPLIES</td><td>20-25C</td><td>C-04</td><td>2024-11</td><td><button type="button" class="btn-action-update">Actualizar</button><button type="button" class="btn-action-delete">Eliminar</button></td></tr>
+    <tr><td>INV-H5</td><td>ADRENALINA</td><td>LT-88</td><td>PHARMA CORP</td><td>15-25C</td><td>CARRO DE PARO</td><td>2025-08</td><td><button type="button" class="btn-action-update">Actualizar</button><button type="button" class="btn-action-delete">Eliminar</button></td></tr>
+    <tr><td>INV-H6</td><td>SANGRE O-</td><td>LT-01</td><td>BANCO CENTRAL</td><td>1-6C</td><td>FRIGORIFICO HEMATOLOGICO</td><td>2025-10</td><td><button type="button" class="btn-action-update">Actualizar</button><button type="button" class="btn-action-delete">Eliminar</button></td></tr>
+    <tr><td>INV-H7</td><td>SUERO FISIOLOGICO</td><td>LT-11</td><td>EXTER</td><td>AMBIENTE</td><td>PASILLO P-12</td><td>2026-07</td><td><button type="button" class="btn-action-update">Actualizar</button><button type="button" class="btn-action-delete">Eliminar</button></td></tr>
+    <tr><td>INV-H8</td><td>HEPARINA</td><td>LT-34</td><td>PHARMA CORP</td><td>15-30C</td><td>C-02</td><td>2025-01</td><td><button type="button" class="btn-action-update">Actualizar</button><button type="button" class="btn-action-delete">Eliminar</button></td></tr>
   </tbody>
 </table>  
 
 <div class="form-container">
     <h3>Registrar Nuevo Insumo / Medicamento</h3>
     <form id="registroForm">
-        <div class="form-group"><label>ID del Insumo:</label><input type="text" name="id_insumo" required></div>
-        <div class="form-group"><label>Insumo (Medicamento):</label><input type="text" name="insumo" required></div>
-        <div class="form-group"><label>Lote:</label><input type="text" name="lote" required></div>
-        <div class="form-group"><label>Proveedor:</label><input type="text" name="proveedor" required></div>
-        <div class="form-group"><label>Temperatura Requerida:</label><input type="text" name="temp_requerida" required></div>
-        <div class="form-group"><label>Pasillo / Estante:</label><input type="text" name="pasillo_estante" required></div>
-        <div class="form-group"><label>Alerta de Caducidad:</label><input type="text" name="alerta_caducidad" placeholder="YYYY-MM" required></div>
+        <div class="form-group"><label>ID del Insumo:</label><input type="text" required></div>
+        <div class="form-group"><label>Insumo (Medicamento):</label><input type="text" required></div>
+        <div class="form-group"><label>Lote:</label><input type="text" required></div>
+        <div class="form-group"><label>Proveedor:</label><input type="text" required></div>
+        <div class="form-group"><label>Temperatura Requerida:</label><input type="text" required></div>
+        <div class="form-group"><label>Pasillo / Estante:</label><input type="text" required></div>
+        <div class="form-group"><label>Alerta de Caducidad:</label><input type="text" placeholder="YYYY-MM" required></div>
         <button type="submit" class="btn-submit">Registrar Medicamento</button>
     </form>
 </div>
 </main>
-<footer><p>ERIK MARTINEZ MONTES N.CONTROL 24308051280869</p></footer>
+
+<footer>
+  <img src="axolote.jpg" alt="logo de un axolote" width="60">
+  <p><strong>ERIK MARTINEZ MONTES</strong></p>
+  <p>A.24308051280869</p>
+  <p style="color: #00bcd4; font-weight: bold; margin-top: 10px;">BASE DE DATOS NO RELACIONALES</p>
+</footer>
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  // BÚSQUEDA
   const searchInput = document.querySelector('.input-search');
   function filterTable() {
     let filter = searchInput.value.toLowerCase();
@@ -109,7 +108,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector('.btn-search').addEventListener('click', filterTable);
   searchInput.addEventListener('keyup', filterTable);
 
-  // ELIMINAR Y ACTUALIZAR
   document.querySelector('tbody').addEventListener('click', function(e) {
     if(e.target.classList.contains('btn-action-delete')) {
       if(confirm('¿Seguro que deseas eliminar este registro?')) e.target.closest('tr').remove();
@@ -135,7 +133,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // AGREGAR NUEVO
   document.getElementById('registroForm').addEventListener('submit', function(e) {
     e.preventDefault();
     let newRow = document.createElement('tr');
