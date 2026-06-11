@@ -24,9 +24,11 @@
     .form-container h3 { color: #004a7c; text-align: center; margin-top: 0; }
     .form-group { margin-bottom: 20px; }
     label { display: block; margin-bottom: 6px; font-weight: bold; font-size: 14px; }
-    input[type="text"], input[type="email"] { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+    input[type="text"] { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
     .btn-submit { background-color: #409b81; color: white; border: none; padding: 12px; width: 100%; border-radius: 4px; font-weight: bold; cursor: pointer; margin-top: 10px; }
-    footer { background-color: #777; padding: 20px; text-align: center; color: white; margin-top: 20px; }
+    footer { background-color: #222; padding: 30px; text-align: center; color: white; font-size: 0.9rem; margin-top: 40px; }
+    footer img { border-radius: 50%; margin-bottom: 10px; }
+    footer p { margin: 5px 0; letter-spacing: 1px; }
   </style>
 </head>
 <body>
@@ -61,31 +63,41 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>ST-201</td><td>DR.HOUSE</td><td>MEDICO</td><td>lIC-001</td><td>House.g@hosp.com</td><td>c-101</td><td>12000</td><td>656-11033-4478</td><td>cardiologo</td><td>DE LUNES A VIERNES</td>
-      <td><button type="button" class="btn-action-update">Actualizar</button> <button type="button" class="btn-action-delete">Eliminar</button></td>
-    </tr>
+    <tr><td>ST-201</td><td>DR.HOUSE</td><td>MEDICO</td><td>lIC-001</td><td>House.g@hosp.com</td><td>c-101</td><td>12000</td><td>656-11033-4478</td><td>cardiologo</td><td>DE LUNES A VIERNES</td><td><button type="button" class="btn-action-update">Actualizar</button><button type="button" class="btn-action-delete">Eliminar</button></td></tr>
+    <tr><td>ST-202</td><td>DRA.GREY</td><td>MEDICO</td><td>LIC-002</td><td>Grey.m@hosp.com</td><td>c-402</td><td>9500</td><td>656-1330-4256</td><td>urologo</td><td>DE LUNES A VIERNES</td><td><button type="button" class="btn-action-update">Actualizar</button><button type="button" class="btn-action-delete">Eliminar</button></td></tr>
+    <tr><td>ST-203</td><td>ENF.RATCHED</td><td>ENFERMERA</td><td>LIC-003</td><td>Ratched.m@hosp.com</td><td>PISO 5</td><td>4500</td><td>656-114-6644</td><td>ginecologo</td><td>DE LUNES A VIERNES</td><td><button type="button" class="btn-action-update">Actualizar</button><button type="button" class="btn-action-delete">Eliminar</button></td></tr>
+    <tr><td>ST-204</td><td>DR.STRANGE</td><td>MEDICO</td><td>LIC-004</td><td>STRANGE@hos.com</td><td>C-405</td><td>15000</td><td>656-150-0072</td><td>dentista</td><td>DE LUNES A VIERNES</td><td><button type="button" class="btn-action-update">Actualizar</button><button type="button" class="btn-action-delete">Eliminar</button></td></tr>
+    <tr><td>ST-205</td><td>ENF.JOY</td><td>ENFERMERA</td><td>LIC-005</td><td>JOY.P@hosp.com</td><td>TRAJE PB</td><td>3800</td><td>656-104-8318</td><td>dermatologia</td><td>DE LUNES A VIERNES</td><td><button type="button" class="btn-action-update">Actualizar</button><button type="button" class="btn-action-delete">Eliminar</button></td></tr>
+    <tr><td>ST-206</td><td>DR.SHAUN</td><td>MEDICO</td><td>LIC-006</td><td>SHAUN.M@hosp.com</td><td>C-208</td><td>8200</td><td>656-146-1490</td><td>pediatra</td><td>DE LUNES A VIERNES</td><td><button type="button" class="btn-action-update">Actualizar</button><button type="button" class="btn-action-delete">Eliminar</button></td></tr>
+    <tr><td>ST-207</td><td>DRA.CUDDY</td><td>ADMIN/MED</td><td>LIC-007</td><td>cuddy.l@hosp.com</td><td>CONSULTORIO OFICINA DR</td><td>11000</td><td>656-104-8318</td><td>nutriologa</td><td>DE LUNES A VIERNES</td><td><button type="button" class="btn-action-update">Actualizar</button><button type="button" class="btn-action-delete">Eliminar</button></td></tr>
+    <tr><td>ST-208</td><td>DR WILSON</td><td>MEDICO</td><td>LIC-008</td><td>wilson.j@hosp.com</td><td>C-301</td><td>9000</td><td>656-111-0318</td><td>anestesiologo</td><td>DE LUNES A VIERNES</td><td><button type="button" class="btn-action-update">Actualizar</button><button type="button" class="btn-action-delete">Eliminar</button></td></tr>
   </tbody>
 </table>  
 
 <div class="form-container">
     <h3>Alta de Personal Médico / Enfermería</h3>
     <form id="registroForm">
-        <div class="form-group"><label>ID de Personal:</label><input type="text" name="id_personal" required></div>
-        <div class="form-group"><label>Nombre Completo:</label><input type="text" name="nombre" required></div>
-        <div class="form-group"><label>Rol:</label><input type="text" name="rol" required></div>
-        <div class="form-group"><label>Licencia Médica:</label><input type="text" name="licencia" required></div>
-        <div class="form-group"><label>Email Corporativo:</label><input type="email" name="email_corp" required></div>
-        <div class="form-group"><label>N* Consultorio:</label><input type="text" name="num_consultorio" required></div>
-        <div class="form-group"><label>Sueldo Base ($):</label><input type="text" name="sueldo" required></div>
-        <div class="form-group"><label>Teléfono:</label><input type="text" name="telefono" required></div>
-        <div class="form-group"><label>Especialidad:</label><input type="text" name="especialidad" required></div>
-        <div class="form-group"><label>Horario Laboral:</label><input type="text" name="horario" required></div>
+        <div class="form-group"><label>ID de Personal:</label><input type="text" required></div>
+        <div class="form-group"><label>Nombre Completo:</label><input type="text" required></div>
+        <div class="form-group"><label>Rol:</label><input type="text" required></div>
+        <div class="form-group"><label>Licencia Médica:</label><input type="text" required></div>
+        <div class="form-group"><label>Email Corporativo:</label><input type="text" required></div>
+        <div class="form-group"><label>N* Consultorio:</label><input type="text" required></div>
+        <div class="form-group"><label>Sueldo Base ($):</label><input type="text" required></div>
+        <div class="form-group"><label>Teléfono:</label><input type="text" required></div>
+        <div class="form-group"><label>Especialidad:</label><input type="text" required></div>
+        <div class="form-group"><label>Horario Laboral:</label><input type="text" required></div>
         <button type="submit" class="btn-submit">Dar de alta</button>
     </form>
 </div>
 </main>
-<footer><p>ERIK MARTINEZ MONTES N.CONTROL 24308051280869</p></footer>
+
+<footer>
+  <img src="axolote.jpg" alt="logo de un axolote" width="60">
+  <p><strong>ERIK MARTINEZ MONTES</strong></p>
+  <p>A.24308051280869</p>
+  <p style="color: #00bcd4; font-weight: bold; margin-top: 10px;">BASE DE DATOS NO RELACIONALES</p>
+</footer>
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
