@@ -24,9 +24,11 @@
     .form-container h3 { color: #004a7c; text-align: center; margin-top: 0; }
     .form-group { margin-bottom: 20px; }
     label { display: block; margin-bottom: 6px; font-weight: bold; color: #333; font-size: 14px; }
-    input[type="text"], input[type="number"] { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+    input[type="text"] { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
     .btn-submit { background-color: #409b81; color: white; border: none; padding: 12px; width: 100%; border-radius: 4px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 10px; }
-    footer { background-color: #777; padding: 20px; text-align: center; color: white; margin-top: 20px; }
+    footer { background-color: #222; padding: 30px; text-align: center; color: white; font-size: 0.9rem; margin-top: 40px; }
+    footer img { border-radius: 50%; margin-bottom: 10px; }
+    footer p { margin: 5px 0; letter-spacing: 1px; }
   </style>
 </head>
 <body>
@@ -61,30 +63,40 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>F-1001</td><td>P-101</td><td>PENDIENTE SEGURO</td><td>JUAN PEREZ</td><td>OP-901</td><td>45,000</td><td>7200</td><td>1500</td><td>53,700</td>
-      <td><button type="button" class="btn-action-update">Actualizar</button> <button type="button" class="btn-action-delete">Eliminar</button></td>
-    </tr>
+    <tr><td>F-1001</td><td>P-101</td><td>PENDIENTE SEGURO</td><td>JUAN PEREZ</td><td>OP-901</td><td>45,000</td><td>7200</td><td>1500</td><td>53,700</td><td><button type="button" class="btn-action-update">Actualizar</button><button type="button" class="btn-action-delete">Eliminar</button></td></tr>
+    <tr><td>F-1002</td><td>P-102</td><td>PAGADO</td><td>MARIANA SOZA</td><td>OP-902</td><td>12000</td><td>1920</td><td>1500</td><td>54,420</td><td><button type="button" class="btn-action-update">Actualizar</button><button type="button" class="btn-action-delete">Eliminar</button></td></tr>
+    <tr><td>F-1003</td><td>P-103</td><td>PENDIENTE</td><td>PEDRO PARAMO</td><td>OP-903</td><td>85000</td><td>13,600</td><td>5000</td><td>600</td><td><button type="button" class="btn-action-update">Actualizar</button><button type="button" class="btn-action-delete">Eliminar</button></td></tr>
+    <tr><td>F-1004</td><td>P-104</td><td>PAGADO POR SEGURO</td><td>ANA FRANK</td><td>OP-904</td><td>32000</td><td>5120</td><td>0</td><td>37120</td><td><button type="button" class="btn-action-update">Actualizar</button><button type="button" class="btn-action-delete">Eliminar</button></td></tr>
+    <tr><td>F-1005</td><td>P-105</td><td>PAGADO</td><td>LUIS MIGUEL</td><td>OP-905</td><td>5000</td><td>800</td><td>200</td><td>6000</td><td><button type="button" class="btn-action-update">Actualizar</button><button type="button" class="btn-action-delete">Eliminar</button></td></tr>
+    <tr><td>F-1006</td><td>P-106</td><td>PAGADO EN EFECTIVO</td><td>CARMEN LIRA</td><td>OP-906</td><td>1500</td><td>240</td><td>1740</td><td>1740</td><td><button type="button" class="btn-action-update">Actualizar</button><button type="button" class="btn-action-delete">Eliminar</button></td></tr>
+    <tr><td>F-1007</td><td>P-107</td><td>PENDIENTE</td><td>JOSE ARCADIO</td><td>OP-907</td><td>15500</td><td>2480</td><td>800</td><td>18780</td><td><button type="button" class="btn-action-update">Actualizar</button><button type="button" class="btn-action-delete">Eliminar</button></td></tr>
+    <tr><td>F-1008</td><td>P-108</td><td>PAGADO</td><td>URSULA IGUARAN</td><td>OP-908</td><td>28000</td><td>4,480</td><td>1200</td><td>33687</td><td><button type="button" class="btn-action-update">Actualizar</button><button type="button" class="btn-action-delete">Eliminar</button></td></tr>
   </tbody>
 </table>  
 
 <div class="form-container">
     <h3>Generar Nuevo Comprobante</h3>
     <form id="registroForm">
-        <div class="form-group"><label>ID de Factura:</label><input type="text" name="id_factura" required></div>
-        <div class="form-group"><label>Pacientes-ID:</label><input type="text" name="paciente_id" required></div>
-        <div class="form-group"><label>Estado de Pago:</label><input type="text" name="estado_pago" required></div>
-        <div class="form-group"><label>Nombre Paciente:</label><input type="text" name="nombre_paciente" required></div>
-        <div class="form-group"><label>Cita / OP:</label><input type="text" name="cita_op" required></div>
-        <div class="form-group"><label>Subtotal ($):</label><input type="text" name="subtotal" required></div>
-        <div class="form-group"><label>Impuestos ($):</label><input type="text" name="impuestos" required></div>
-        <div class="form-group"><label>Copago ($):</label><input type="text" name="copago" required></div>
-        <div class="form-group"><label>Total Final ($):</label><input type="text" name="total_final" required></div>
+        <div class="form-group"><label>ID de Factura:</label><input type="text" required></div>
+        <div class="form-group"><label>Pacientes-ID:</label><input type="text" required></div>
+        <div class="form-group"><label>Estado de Pago:</label><input type="text" required></div>
+        <div class="form-group"><label>Nombre Paciente:</label><input type="text" required></div>
+        <div class="form-group"><label>Cita / OP:</label><input type="text" required></div>
+        <div class="form-group"><label>Subtotal ($):</label><input type="text" required></div>
+        <div class="form-group"><label>Impuestos ($):</label><input type="text" required></div>
+        <div class="form-group"><label>Copago ($):</label><input type="text" required></div>
+        <div class="form-group"><label>Total Final ($):</label><input type="text" required></div>
         <button type="submit" class="btn-submit">Emitir Factura</button>
     </form>
 </div>
 </main>
-<footer><p>ERIK MARTINEZ MONTES N.CONTROL 24308051280869</p></footer>
+
+<footer>
+  <img src="axolote.jpg" alt="logo de un axolote" width="60">
+  <p><strong>ERIK MARTINEZ MONTES</strong></p>
+  <p>A.24308051280869</p>
+  <p style="color: #00bcd4; font-weight: bold; margin-top: 10px;">BASE DE DATOS NO RELACIONALES</p>
+</footer>
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
