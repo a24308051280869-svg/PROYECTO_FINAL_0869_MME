@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultorio Médico - Facturación</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background-color: #f9f9f9; }
+    header { background-color: #004a7c; padding: 30px; text-align: center; color: white; }
+    nav { width: 100%; background: #00bcd4; padding: 15px; }
+    nav ul { list-style-type: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 50px; }
+    nav ul li a { color: white; text-decoration: none; font-weight: bold; letter-spacing: 1px; }
+    article h2 { color: #409b81; text-align: center; }
+    .search-container { width: 90%; margin: 20px auto 0 auto; display: flex; justify-content: flex-end; gap: 10px; }
+    .input-search { padding: 8px 12px; border: 1px solid #ccc; border-radius: 4px; width: 250px; }
+    .btn-search { background-color: #004a7c; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+    table { width: 90%; margin: 10px auto 20px auto; border-collapse: collapse; background-color: white; }
+    table th, table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+    table th { background-color: #409b81; color: white; }
+    table tr:nth-child(even) { background-color: #9fc2a8; }
+    .btn-action-update { background-color: #00bcd4; color: white; border: none; padding: 6px 10px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 12px; margin-right: 5px; }
+    .btn-action-delete { background-color: #dc3545; color: white; border: none; padding: 6px 10px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 12px; }
+    .form-container { max-width: 600px; width: 90%; background: white; padding: 30px; margin: 40px auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 6px solid #409b81; }
+    .form-container h3 { color: #004a7c; text-align: center; margin-top: 0; }
+    .form-group { margin-bottom: 20px; }
+    label { display: block; margin-bottom: 6px; font-weight: bold; color: #333; font-size: 14px; }
+    input[type="text"], input[type="number"] { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+    .btn-submit { background-color: #409b81; color: white; border: none; padding: 12px; width: 100%; border-radius: 4px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+    footer { background-color: #777; padding: 20px; text-align: center; color: white; margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>CONSULTORIO MÉDICO</h2>
+  <img src="axolote.jpg" alt="logo de un axolote" width="100">
+</header>
+
+<nav>
+  <ul>
+    <li><a href="PAGINA_PRINCIPAL_MME_0869.html">INICIO</a></li> 
+    <li><a href="PACIENTES.html">PACIENTES</a></li> 
+    <li><a href="MEDICOS.html">MEDICOS</a></li> 
+    <li><a href="MEDICAMENTOS.html">MEDICAMENTOS</a></li> 
+    <li><a href="FACTURACION.html">FACTURACION</a></li> 
+  </ul>
+</nav>
+
+<section><article><h2>FACTURACION</h2></article></section>
+
+<main>
+<div class="search-container">
+  <input type="text" class="input-search" placeholder="Buscar folio o cliente...">
+  <button type="button" class="btn-search">Buscar</button>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th><th>PACIENTES-ID</th><th>ESTADO DE PAGO</th><th>N.NOMBRE</th><th>CITA/OP</th><th>SUBTOTAL</th><th>IMPUESTOS</th><th>COPAGO PACIENTE</th><th>TOTAL FINAL</th><th>ACCIONES</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>F-1001</td><td>P-101</td><td>PENDIENTE SEGURO</td><td>JUAN PEREZ</td><td>OP-901</td><td>45,000</td><td>7200</td><td>1500</td><td>53,700</td>
+      <td><button type="button" class="btn-action-update">Actualizar</button> <button type="button" class="btn-action-delete">Eliminar</button></td>
+    </tr>
+  </tbody>
+</table>  
+
+<div class="form-container">
+    <h3>Generar Nuevo Comprobante</h3>
+    <form id="registroForm">
+        <div class="form-group"><label>ID de Factura:</label><input type="text" name="id_factura" required></div>
+        <div class="form-group"><label>Pacientes-ID:</label><input type="text" name="paciente_id" required></div>
+        <div class="form-group"><label>Estado de Pago:</label><input type="text" name="estado_pago" required></div>
+        <div class="form-group"><label>Nombre Paciente:</label><input type="text" name="nombre_paciente" required></div>
+        <div class="form-group"><label>Cita / OP:</label><input type="text" name="cita_op" required></div>
+        <div class="form-group"><label>Subtotal ($):</label><input type="text" name="subtotal" required></div>
+        <div class="form-group"><label>Impuestos ($):</label><input type="text" name="impuestos" required></div>
+        <div class="form-group"><label>Copago ($):</label><input type="text" name="copago" required></div>
+        <div class="form-group"><label>Total Final ($):</label><input type="text" name="total_final" required></div>
+        <button type="submit" class="btn-submit">Emitir Factura</button>
+    </form>
+</div>
+</main>
+<footer><p>ERIK MARTINEZ MONTES N.CONTROL 24308051280869</p></footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.querySelector('.input-search');
+  function filterTable() {
+    let filter = searchInput.value.toLowerCase();
+    document.querySelectorAll('tbody tr').forEach(row => {
+      row.style.display = row.innerText.toLowerCase().includes(filter) ? '' : 'none';
+    });
+  }
+  document.querySelector('.btn-search').addEventListener('click', filterTable);
+  searchInput.addEventListener('keyup', filterTable);
+
+  document.querySelector('tbody').addEventListener('click', function(e) {
+    if(e.target.classList.contains('btn-action-delete')) {
+      if(confirm('¿Seguro que deseas eliminar esta factura?')) e.target.closest('tr').remove();
+    }
+    if(e.target.classList.contains('btn-action-update')) {
+      let cells = e.target.closest('tr').querySelectorAll('td');
+      if (e.target.innerText === "Actualizar") {
+        cells.forEach((cell, i) => {
+          if (i < cells.length - 1) cell.innerHTML = `<input type="text" value="${cell.innerText}" style="width: 100%; box-sizing: border-box;">`;
+        });
+        e.target.innerText = "Guardar";
+        e.target.style.backgroundColor = "#28a745";
+      } else {
+        cells.forEach((cell, i) => {
+          if (i < cells.length - 1) {
+            let input = cell.querySelector('input');
+            if(input) cell.innerText = input.value;
+          }
+        });
+        e.target.innerText = "Actualizar";
+        e.target.style.backgroundColor = "";
+      }
+    }
+  });
+
+  document.getElementById('registroForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    let newRow = document.createElement('tr');
+    let html = '';
+    this.querySelectorAll('input').forEach(input => { html += `<td>${input.value.toUpperCase()}</td>`; });
+    html += `<td><button type="button" class="btn-action-update">Actualizar</button> <button type="button" class="btn-action-delete">Eliminar</button></td>`;
+    newRow.innerHTML = html;
+    document.querySelector('tbody').appendChild(newRow);
+    this.reset();
+    alert('Factura emitida exitosamente');
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultorio Médico - Médicos</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background-color: #f9f9f9; }
+    header { background-color: #004a7c; padding: 30px; text-align: center; color: white; }
+    nav { width: 100%; background: #00bcd4; padding: 15px; }
+    nav ul { list-style-type: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 50px; }
+    nav ul li a { color: white; text-decoration: none; font-weight: bold; letter-spacing: 1px; }
+    article h2 { color: #409b81; text-align: center; }
+    .search-container { width: 90%; margin: 20px auto 0 auto; display: flex; justify-content: flex-end; gap: 10px; }
+    .input-search { padding: 8px 12px; border: 1px solid #ccc; border-radius: 4px; width: 250px; }
+    .btn-search { background-color: #004a7c; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+    table { width: 90%; margin: 10px auto 20px auto; border-collapse: collapse; background-color: white; }
+    table th, table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+    table th { background-color: #409b81; color: white; }
+    table tr:nth-child(even) { background-color: #9fc2a8; }
+    .btn-action-update { background-color: #00bcd4; color: white; border: none; padding: 6px 10px; border-radius: 4px; cursor: pointer; font-weight: bold; margin-right: 5px; }
+    .btn-action-delete { background-color: #dc3545; color: white; border: none; padding: 6px 10px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+    .form-container { max-width: 600px; width: 90%; background: white; padding: 30px; margin: 40px auto; border-radius: 8px; border-top: 6px solid #409b81; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    .form-container h3 { color: #004a7c; text-align: center; margin-top: 0; }
+    .form-group { margin-bottom: 20px; }
+    label { display: block; margin-bottom: 6px; font-weight: bold; font-size: 14px; }
+    input[type="text"], input[type="email"] { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+    .btn-submit { background-color: #409b81; color: white; border: none; padding: 12px; width: 100%; border-radius: 4px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+    footer { background-color: #777; padding: 20px; text-align: center; color: white; margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>CONSULTORIO MÉDICO</h2>
+  <img src="axolote.jpg" alt="logo de un axolote" width="100">
+</header>
+
+<nav>
+  <ul>
+    <li><a href="PAGINA_PRINCIPAL_MME_0869.html">INICIO</a></li> 
+    <li><a href="PACIENTES.html">PACIENTES</a></li> 
+    <li><a href="MEDICOS.html">MEDICOS</a></li> 
+    <li><a href="MEDICAMENTOS.html">MEDICAMENTOS</a></li> 
+    <li><a href="FACTURACION.html">FACTURACION</a></li> 
+  </ul>
+</nav>
+
+<section><article><h2>PERSONAL MÉDICO</h2></article></section>
+
+<main>
+<div class="search-container">
+  <input type="text" class="input-search" placeholder="Buscar médico o especialidad...">
+  <button type="button" class="btn-search">Buscar</button>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th><th>NOMBRE</th><th>ROL</th><th>LICENCIA</th><th>EMAIL.CORP</th><th>N*COSULTORIO</th><th>SUELDO</th><th>TELEFONO</th><th>ESPECIALIDAD</th><th>HORARIO</th><th>ACCIONES</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ST-201</td><td>DR.HOUSE</td><td>MEDICO</td><td>lIC-001</td><td>House.g@hosp.com</td><td>c-101</td><td>12000</td><td>656-11033-4478</td><td>cardiologo</td><td>DE LUNES A VIERNES</td>
+      <td><button type="button" class="btn-action-update">Actualizar</button> <button type="button" class="btn-action-delete">Eliminar</button></td>
+    </tr>
+  </tbody>
+</table>  
+
+<div class="form-container">
+    <h3>Alta de Personal Médico / Enfermería</h3>
+    <form id="registroForm">
+        <div class="form-group"><label>ID de Personal:</label><input type="text" name="id_personal" required></div>
+        <div class="form-group"><label>Nombre Completo:</label><input type="text" name="nombre" required></div>
+        <div class="form-group"><label>Rol:</label><input type="text" name="rol" required></div>
+        <div class="form-group"><label>Licencia Médica:</label><input type="text" name="licencia" required></div>
+        <div class="form-group"><label>Email Corporativo:</label><input type="email" name="email_corp" required></div>
+        <div class="form-group"><label>N* Consultorio:</label><input type="text" name="num_consultorio" required></div>
+        <div class="form-group"><label>Sueldo Base ($):</label><input type="text" name="sueldo" required></div>
+        <div class="form-group"><label>Teléfono:</label><input type="text" name="telefono" required></div>
+        <div class="form-group"><label>Especialidad:</label><input type="text" name="especialidad" required></div>
+        <div class="form-group"><label>Horario Laboral:</label><input type="text" name="horario" required></div>
+        <button type="submit" class="btn-submit">Dar de alta</button>
+    </form>
+</div>
+</main>
+<footer><p>ERIK MARTINEZ MONTES N.CONTROL 24308051280869</p></footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.querySelector('.input-search');
+  function filterTable() {
+    let filter = searchInput.value.toLowerCase();
+    document.querySelectorAll('tbody tr').forEach(row => {
+      row.style.display = row.innerText.toLowerCase().includes(filter) ? '' : 'none';
+    });
+  }
+  document.querySelector('.btn-search').addEventListener('click', filterTable);
+  searchInput.addEventListener('keyup', filterTable);
+
+  document.querySelector('tbody').addEventListener('click', function(e) {
+    if(e.target.classList.contains('btn-action-delete')) {
+      if(confirm('¿Seguro que deseas eliminar a este empleado?')) e.target.closest('tr').remove();
+    }
+    if(e.target.classList.contains('btn-action-update')) {
+      let cells = e.target.closest('tr').querySelectorAll('td');
+      if (e.target.innerText === "Actualizar") {
+        cells.forEach((cell, i) => {
+          if (i < cells.length - 1) cell.innerHTML = `<input type="text" value="${cell.innerText}" style="width: 100%; box-sizing: border-box;">`;
+        });
+        e.target.innerText = "Guardar";
+        e.target.style.backgroundColor = "#28a745";
+      } else {
+        cells.forEach((cell, i) => {
+          if (i < cells.length - 1) {
+            let input = cell.querySelector('input');
+            if(input) cell.innerText = input.value;
+          }
+        });
+        e.target.innerText = "Actualizar";
+        e.target.style.backgroundColor = "";
+      }
+    }
+  });
+
+  document.getElementById('registroForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    let newRow = document.createElement('tr');
+    let html = '';
+    this.querySelectorAll('input').forEach(input => { html += `<td>${input.value.toUpperCase()}</td>`; });
+    html += `<td><button type="button" class="btn-action-update">Actualizar</button> <button type="button" class="btn-action-delete">Eliminar</button></td>`;
+    newRow.innerHTML = html;
+    document.querySelector('tbody').appendChild(newRow);
+    this.reset();
+    alert('Personal dado de alta exitosamente');
+  });
+});
+</script>
+</body>
+</html>

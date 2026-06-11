@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultorio Médico - Medicamentos</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background-color: #f9f9f9; }
+    header { background-color: #004a7c; padding: 30px; text-align: center; color: white; }
+    nav { width: 100%; background: #00bcd4; padding: 15px; }
+    nav ul { list-style-type: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 50px; }
+    nav ul li a { color: white; text-decoration: none; font-weight: bold; letter-spacing: 1px; }
+    article h2 { color: #409b81; text-align: center; }
+    .search-container { width: 90%; margin: 20px auto 0 auto; display: flex; justify-content: flex-end; gap: 10px; }
+    .input-search { padding: 8px 12px; border: 1px solid #ccc; border-radius: 4px; width: 250px; font-family: Arial, sans-serif; }
+    .btn-search { background-color: #004a7c; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+    .btn-search:hover { background-color: #002d50; }
+    table { width: 90%; margin: 10px auto 20px auto; border-collapse: collapse; background-color: white; }
+    table th, table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+    table th { background-color: #409b81; color: white; }
+    table tr:nth-child(even) { background-color: #9fc2a8; }
+    .btn-action-update { background-color: #00bcd4; color: white; border: none; padding: 6px 10px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 12px; margin-right: 5px; }
+    .btn-action-update:hover { background-color: #0091a4; }
+    .btn-action-delete { background-color: #dc3545; color: white; border: none; padding: 6px 10px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 12px; }
+    .btn-action-delete:hover { background-color: #bd2130; }
+    .form-container { max-width: 600px; width: 90%; background: white; padding: 30px; margin: 40px auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 6px solid #409b81; }
+    .form-container h3 { color: #004a7c; text-align: center; margin-top: 0; font-size: 1.5rem; }
+    .form-container p { text-align: center; color: #666; font-size: 0.9rem; margin-bottom: 25px; }
+    .form-group { margin-bottom: 20px; }
+    label { display: block; margin-bottom: 6px; font-weight: bold; color: #333; font-size: 14px; }
+    input[type="text"], input[type="number"], input[type="month"] { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-family: Arial, sans-serif; font-size: 14px; box-sizing: border-box; }
+    input:focus { outline: none; border-color: #409b81; box-shadow: 0 0 5px rgba(64, 155, 129, 0.3); }
+    .btn-submit { background-color: #409b81; color: white; border: none; padding: 12px; width: 100%; border-radius: 4px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+    .btn-submit:hover { background-color: #337a66; }
+    .btn-back-box { text-align: center; margin-top: 20px; }
+    .btn-back { color: #004a7c; text-decoration: none; font-size: 14px; font-weight: bold; }
+    footer { background-color: #777; padding: 20px; text-align: center; color: white; margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>CONSULTORIO MÉDICO</h2>
+  <img src="axolote.jpg" alt="logo de un axolote" width="100">
+</header>
+
+<nav>
+  <ul>
+    <li><a href="PAGINA_PRINCIPAL_MME_0869.html">INICIO</a></li> 
+    <li><a href="PACIENTES.html">PACIENTES</a></li> 
+    <li><a href="MEDICOS.html">MEDICOS</a></li> 
+    <li><a href="MEDICAMENTOS.html">MEDICAMENTOS</a></li> 
+    <li><a href="FACTURACION.html">FACTURACION</a></li> 
+  </ul>
+</nav>
+
+<section><article><h2>MEDICAMENTOS</h2></article></section>
+
+<main>
+<div class="search-container">
+  <input type="text" class="input-search" placeholder="Buscar medicamento o lote...">
+  <button type="button" class="btn-search">Buscar</button>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th><th>INSUMO</th><th>LOTE</th><th>PROVEDOR</th><th>TEMP.REQUERIDA</th><th>PASILLO/ESTANTE</th><th>ALERTA DE CADUCIDAD</th><th>ACCIONES</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>INV-H1</td><td>MORFINA 10MG</td><td>LT-99</td><td>PHARMA CORP</td><td>15-25C</td><td>A-01(CAJA FUERTA)</td><td>2024-12</td>
+      <td><button type="button" class="btn-action-update">Actualizar</button> <button type="button" class="btn-action-delete">Eliminar</button></td>
+    </tr>
+    <tr>
+      <td>INV-H2</td><td>INSULINA</td><td>LT-45</td><td>BIOLABS</td><td>2-8C</td><td>REFRIGERADOR B-2</td><td>2025-05</td>
+      <td><button type="button" class="btn-action-update">Actualizar</button> <button type="button" class="btn-action-delete">Eliminar</button></td>
+    </tr>
+  </tbody>
+</table>  
+
+<div class="form-container">
+    <h3>Registrar Nuevo Insumo / Medicamento</h3>
+    <form id="registroForm">
+        <div class="form-group"><label>ID del Insumo:</label><input type="text" name="id_insumo" required></div>
+        <div class="form-group"><label>Insumo (Medicamento):</label><input type="text" name="insumo" required></div>
+        <div class="form-group"><label>Lote:</label><input type="text" name="lote" required></div>
+        <div class="form-group"><label>Proveedor:</label><input type="text" name="proveedor" required></div>
+        <div class="form-group"><label>Temperatura Requerida:</label><input type="text" name="temp_requerida" required></div>
+        <div class="form-group"><label>Pasillo / Estante:</label><input type="text" name="pasillo_estante" required></div>
+        <div class="form-group"><label>Alerta de Caducidad:</label><input type="text" name="alerta_caducidad" placeholder="YYYY-MM" required></div>
+        <button type="submit" class="btn-submit">Registrar Medicamento</button>
+    </form>
+</div>
+</main>
+<footer><p>ERIK MARTINEZ MONTES N.CONTROL 24308051280869</p></footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // BÚSQUEDA
+  const searchInput = document.querySelector('.input-search');
+  function filterTable() {
+    let filter = searchInput.value.toLowerCase();
+    document.querySelectorAll('tbody tr').forEach(row => {
+      row.style.display = row.innerText.toLowerCase().includes(filter) ? '' : 'none';
+    });
+  }
+  document.querySelector('.btn-search').addEventListener('click', filterTable);
+  searchInput.addEventListener('keyup', filterTable);
+
+  // ELIMINAR Y ACTUALIZAR
+  document.querySelector('tbody').addEventListener('click', function(e) {
+    if(e.target.classList.contains('btn-action-delete')) {
+      if(confirm('¿Seguro que deseas eliminar este registro?')) e.target.closest('tr').remove();
+    }
+    if(e.target.classList.contains('btn-action-update')) {
+      let cells = e.target.closest('tr').querySelectorAll('td');
+      if (e.target.innerText === "Actualizar") {
+        cells.forEach((cell, i) => {
+          if (i < cells.length - 1) cell.innerHTML = `<input type="text" value="${cell.innerText}" style="width: 100%; box-sizing: border-box;">`;
+        });
+        e.target.innerText = "Guardar";
+        e.target.style.backgroundColor = "#28a745";
+      } else {
+        cells.forEach((cell, i) => {
+          if (i < cells.length - 1) {
+            let input = cell.querySelector('input');
+            if(input) cell.innerText = input.value;
+          }
+        });
+        e.target.innerText = "Actualizar";
+        e.target.style.backgroundColor = "";
+      }
+    }
+  });
+
+  // AGREGAR NUEVO
+  document.getElementById('registroForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    let newRow = document.createElement('tr');
+    let html = '';
+    this.querySelectorAll('input').forEach(input => { html += `<td>${input.value.toUpperCase()}</td>`; });
+    html += `<td><button type="button" class="btn-action-update">Actualizar</button> <button type="button" class="btn-action-delete">Eliminar</button></td>`;
+    newRow.innerHTML = html;
+    document.querySelector('tbody').appendChild(newRow);
+    this.reset();
+    alert('Medicamento agregado exitosamente');
+  });
+});
+</script>
+</body>
+</html>
